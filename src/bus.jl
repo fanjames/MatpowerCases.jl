@@ -15,7 +15,7 @@ struct Bus
     LAM_P::Vector{Float64}  # "Lagrange multiplier on real power mismatch (u/MW)"
     LAM_Q::Vector{Float64}  # "Lagrange multiplier on reactive power mismatch (u/MVAr)"
     MU_VMAX::Vector{Float64}    # "Kuhn-Tucker multiplier on upper voltage limit (u/p.u.)"
-    MU_VMIN::Vector{Float64}    "Kuhn-Tucker multiplier on lower voltage limit (u/p.u.)"
+    MU_VMIN::Vector{Float64}    # "Kuhn-Tucker multiplier on lower voltage limit (u/p.u.)"
 end
 
 """
