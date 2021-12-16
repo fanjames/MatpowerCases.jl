@@ -1,13 +1,9 @@
-type Gencost
-    "cost model, 1 = piecewise linear, 2 = polynomial "
-    MODEL::Vector{Int64}
-    "startup cost in US dollars"
-    STARTUP::Vector{Float64}
-    "shutdown cost in US dollars"
-    SHUTDOWN::Vector{Float64}
-    "number breakpoints in piecewise linear cost function, or number of coefficients in polynomial cost function"
-    NCOST::Vector{Int64}
-    "parameters defining total cost function begin in this col
+struct Gencost
+    MODEL::Vector{Int64}    # "cost model, 1 = piecewise linear, 2 = polynomial"
+    STARTUP::Vector{Float64}    # "startup cost in US dollars"
+    SHUTDOWN::Vector{Float64}   # "shutdown cost in US dollars"
+    NCOST::Vector{Int64}    # "number breakpoints in piecewise linear cost function, or number of coefficients in polynomial cost function"
+    #= "parameters defining total cost function begin in this col
         (MODEL = 1) : p0, f0, p1, f1, ..., pn, fn
              where p0 < p1 < ... < pn and the cost f(p) is defined
              by the coordinates (p0,f0), (p1,f1), ..., (pn,fn) of
@@ -16,6 +12,7 @@ type Gencost
              n+1 coefficients of an n-th order polynomial cost fcn,
              starting with highest order, where cost is
              f(p) = cn*p^n + ... + c1*p + c0"
+    =#
     COST::Vector{Vector{Float64}}
 end
 
