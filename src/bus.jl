@@ -1,4 +1,4 @@
-struct Bus
+mutable struct Bus
     BUS_I::Vector{Int64}    # "bus number"
     BUS_TYPE::Vector{Int64} # "bus type"
     PD::Vector{Float64}     # "real power demand [MW]"
