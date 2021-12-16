@@ -1,4 +1,4 @@
-struct Gen
+mutable struct Gen
     GEN_BUS::Vector{Int64}  # "bus number"
     PG::Vector{Float64}     # "Pg, real power output (MW)"
     QG::Vector{Float64}     # "Qg, reactive power output (MVAr)"
