@@ -5,7 +5,7 @@ struct Case
     docstring::AbstractString
     bus::Bus
     version::Int64
-    gencost::Union{Gencost, Void}
+    gencost::Union{Gencost, Nothing}
     areas
     bus_name::Vector{AbstractString}
 end
