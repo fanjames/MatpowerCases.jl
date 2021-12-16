@@ -1,4 +1,4 @@
-struct Case
+mutable struct Case
     baseMVA::Float64
     gen::Gen
     branch::Branch
