@@ -20,11 +20,11 @@ function loadcase(caseName::AbstractString; describe=true)
         !isfile(p) && error("No data for network \"$(caseName)\".\nUse casenames() to list all valid names.")
     end
 
-    mpc = matread(p)["mpc"]
-    ds = mpc["docstring"]
-    if describe
-        println(split(ds,"\n")[1])
-    end
+#     mpc = matread(p)["mpc"]
+#     ds = mpc["docstring"]
+#     if describe
+#         println(split(ds,"\n")[1])
+#     end
     return mpc
 end
 
