@@ -1,4 +1,4 @@
-struct Gencost
+mutable struct Gencost
     MODEL::Vector{Int64}    # "cost model, 1 = piecewise linear, 2 = polynomial"
     STARTUP::Vector{Float64}    # "startup cost in US dollars"
     SHUTDOWN::Vector{Float64}   # "shutdown cost in US dollars"
